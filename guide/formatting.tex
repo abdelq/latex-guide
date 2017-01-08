@@ -1,0 +1,23 @@
+\section{Formatage}
+
+\subsection{Gras, italique, souligné}
+
+Il existe trois commandes de bases pour obtenir du gras, de l'italique et du souligné :
+\lstinline|\textbf|, \lstinline|\textit| et \lstinline|\underline|.
+
+\lstinputlisting[firstline=4, lastline=7]{formatting/bf-it-un}
+
+Ces commandes peuvent être combinées, comme dans l'exemple plus haut.
+
+\subsection{Mise en évidence du texte}
+
+La commande \lstinline|\emph| permet de mettre l'accent sur une partie de texte.
+Dans plusieurs cas, \lstinline|\emph| donne le même résultat que \lstinline|\textit|.
+
+Toutefois, les deux commandes ne sont pas exactement les mêmes. \lstinline|\emph| dépend du contexte.
+Dans un texte normal, la section où l'accent est mise est en italique.
+C'est l'inverse si le texte est en italique, la section où l'accent est mise ne l'est pas.
+
+\lstinputlisting[firstline=4, lastline=8]{formatting/emphasis}
+
+Il est à noter que certains <<packages>> comme \emph{Beamer} modifient la commande \lstinline|\emph|.

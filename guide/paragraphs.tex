@@ -1,0 +1,59 @@
+\section{Paragraphes}
+
+Généralement, un paragraphe est séparé d'un autre par une ligne vide, comme ceci :
+
+\lstinputlisting[firstline=4, lastline=6]{paragraphs/intro/breakline}
+
+Il existe une autre façon de séparer ses paragraphes, grâce à la commande \lstinline|\par|.
+On peut écrire les deux paragraphes précédents comme ceci :
+
+\lstinputlisting[firstline=4, lastline=5]{paragraphs/intro/par}
+
+Par défaut, les paragraphes ont une indentation de \emph{1.5 fois} la taille de la police.
+De plus, il n'y a pas d'espace inséré entre les paragraphes.
+
+\subsection{Alignement}
+
+Par défaut, les paragraphes dans \LaTeX{} sont justifiés.
+Pour modifier l'alignement, il existe trois environnements:
+
+\begin{enumerate}
+  \item \texttt{center}, qui centre le texte
+  \item \texttt{flushleft}, qui aligne le texte à gauche
+  \item \texttt{flushright}, qui aligne le texte à droite
+\end{enumerate}
+
+Par exemple :
+
+\lstinputlisting[firstline=4, lastline=16]{paragraphs/alignment}
+
+Les trois environnements mentionnés plus haut sont basés autour des commandes :
+
+\begin{itemize}
+  \item \lstinline|\raggedright|, équivalent à \texttt{flushleft}
+  \item \lstinline|\raggedleft|, équivalent à \texttt{flushright}
+  \item \lstinline|\centering|, équivalent à \texttt{center}
+\end{itemize}
+
+Ces commandes sont des commandes <<switch>>.
+Elles changent l'alignement à partir du point où elles sont insérées, jusqu'à la fin du document,
+sauf si une autre de ces commandes à été utilisée.
+
+\subsection{Indentation}
+
+Par défaut, \LaTeX{} n'indente pas le premier paragraphe d'une section.
+Pour les paragraphes subséquants, la taille de l'indentation est déterminée par le paramètre \lstinline|\parindent|.
+Par exemple :
+
+\lstinputlisting[firstline=4, lastline=10]{paragraphs/indentation}
+
+Il est possible de modifier la taille de l'indentation dans un paragraphe,
+grâce à la commande \lstinline|\setlength|.
+
+Dans l'exemple, \lstinline|\setlength{\parindent}{10pt}| fait en sorte que
+le paragraphe en dessous est indenté de 10pt.
+
+Quant à la commande \lstinline|\noindent|, elle permet de créer un paragraphe sans indentation.
+Au contraire, pour indenter un paragraphe qui n'est pas indenté,
+il est possible d'utiliser \lstinline|\indent|.
+À noter que ça n'a aucun effet, lorsque \lstinline|\parindent| est à \emph{0}.

@@ -1,0 +1,64 @@
+\section{Références}
+
+\subsection{Types de documents}
+\label{documentclass}
+
+Voici une liste des types de documents disponibles avec \lstinline|\documentclass| :
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l l}
+    \textbf{Type de document} & \textbf{Description}                                                                        \\
+    \hline
+    \texttt{article}          & Pour de courts documents. Le type le plus utilisé.                                          \\
+    \hline
+    \texttt{report}           & Pour de longs documents et dissertations.                                                   \\
+    \hline
+    \texttt{book}             & Utile pour la rédaction de livres.                                                          \\
+    \hline
+    \texttt{letter}           & Pour des lettres.                                                                           \\
+    \hline
+    \texttt{slides}           & Pour des présentations, rarement utilisé.                                                   \\
+    \hline
+    \texttt{beamer}           & Diapositives sous le format \texttt{beamer}. Généralement plus utilisé que \texttt{slides}. \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Caractères spéciaux}
+\label{symbols}
+
+Les caractères suivants sont des symboles réservés par \LaTeX{} :
+
+\texttt{\# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash}
+
+Chacun de ces symboles à sa propre fonction.
+Ils peuvent être affichés grâce à des commandes spéciales.
+
+Le tableau ci-dessous couvre cela avec plus de détails :
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l l l}
+    \textbf{Caractère}      & \textbf{Fonction}                & \textbf{Comment l'afficher}                      \\
+    \hline
+    \texttt{\#}             & Paramètre de macro               & \lstinline|\#|                                   \\
+    \hline
+    \texttt{\$}             & Mode mathématique                & \lstinline|\$|                                   \\
+    \hline
+    \texttt{\%}             & Commentaire                      & \lstinline|\%|                                   \\
+    \hline
+    \texttt{\^{}}           & Exposant (mode math.)            & \lstinline|\^{}| ou \lstinline|\textasciicircum| \\
+    \hline
+    \texttt{\&}             & Séparateur de colonnes (tableau) & \lstinline|\&|                                   \\
+    \hline
+    \texttt{\_}             & Indice (mode math.)              & \lstinline|\_|                                   \\
+    \hline
+    \texttt{\{\}}           & Bloc                             & \lstinline|\{\}|                                 \\
+    \hline
+    \texttt{\~{}}           & Espace insécable                 & \lstinline|\~{}| ou \lstinline|\textasciitilde|  \\
+    \hline
+    \texttt{\textbackslash} & Commande                         & \lstinline|\| ou \lstinline|$\backslash$|        \\
+    \hline
+  \end{tabular}
+\end{table}

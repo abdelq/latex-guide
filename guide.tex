@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{geometry}
+\usepackage{polyglossia}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{parskip}
+
+% Paramètres
+\geometry{margin=1in}    % Marges
+\setmainlanguage{french} % Langue
+%% Couleurs
+\definecolor{base08}{HTML}{AB4642}
+\definecolor{base02}{HTML}{383838}
+%% Métadonnées
+\hypersetup{
+  pdftitle=Guide sur LaTeX,
+  pdfsubject=LaTeX,
+  pdfauthor=Abdelhakim Qbaich,
+  hidelinks
+}
+%% Divers
+\lstset{
+  language=[LaTeX]TeX,
+  inputpath=examples,
+  title=\lstname,
+  captionpos=b,
+  numbers=left,
+  numberstyle=\tiny,
+  basicstyle=\tt,
+  commentstyle=\color{base02},
+  keywordstyle=\color{base08}
+}
+\captionsetup[lstlisting]{font={tt,footnotesize}}
+
+\title{Guide sur \LaTeX}
+\author{
+  Abdelhakim Qbaich
+  %
+  \thanks{Fortement inspiré par :
+    \href{https://www.sharelatex.com/learn}{ShareLaTeX},
+    \href{https://en.wikibooks.org/wiki/LaTeX}{Wikibooks}
+  }
+}
+\date{\today}
+
+\begin{document}
+\begin{titlepage}
+  \maketitle
+  \tableofcontents
+\end{titlepage}
+
+\include{guide/create}
+\include{guide/paragraphs}
+\include{guide/formatting}
+\include{guide/lists}
+\include{guide/references}
+\end{document}

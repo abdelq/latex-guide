@@ -1,0 +1,97 @@
+\section{Créer un document}
+
+Un document \LaTeX{} est composé de texte parsemé de commandes.
+
+En voici un exemple :
+
+\lstinputlisting{create/intro.tex}
+
+La première ligne de code sert à déclarer le \hyperref[documentclass]{\emph{type de document}}.
+Dans cet exemple, c'est un \texttt{article}.
+
+La rédaction du contenu se fait dans l'environnement \texttt{document}, c'est-à-dire entre les commandes \lstinline|\begin{document}| et \lstinline|\end{document}|.
+
+\subsection{Préambule}
+\label{preamble}
+
+Ce qui se situe avant \lstinline|\begin{document}| est ce qu'on appelle le préambule.
+Cette zone sert à définir: le type de document, les <<packages>> utilisés, des paramètres\dots
+
+Exemple de préambule :
+
+\lstinputlisting[lastline=7]{create/preamble}
+
+Explications des lignes les plus importantes:
+
+\begin{itemize}
+  \item \lstinline|\documentclass[letterpaper, 12pt]{article}|\\
+  Comme mentionné plus haut, cette commande sert à définir le type de document.\\
+  On peut y ajouter des paramètres additionnels entre crochets, tel que :
+  \begin{itemize}
+    \item Le format de papier : \texttt{letterpaper} (par défaut), \texttt{a4paper}, \texttt{legalpaper}\dots
+    \item La taille de police : \texttt{10pt} (par défaut), \texttt{11pt}, \texttt{12pt}.
+  \end{itemize}
+
+  \item \lstinline|\usepackage[utf8]{inputenc}|\\
+  Ce <<package>> permet de définir l'encodage du document.
+  Il n'est pas nécessaire de l'utiliser, mais fortement recommandé.\\
+  Si le document n'est pas encodé en UTF-8, les caractères spéciaux comme les accents ne s'afficheront pas.
+\end{itemize}
+
+\subsection{Page de présentation}
+
+Pour afficher une simple page de présentation, il faut d'abord déclarer certaines commandes dans le \hyperref[preamble]{préambule} et ajouter quelques lignes de code supplémentaire, comme dans l'exemple ci-dessous :
+
+\lstinputlisting[firstline=5]{create/titlepage}
+
+Généralement, le \hyperref[preamble]{préambule} contient les données qui sont affichées dans la page de présentation, comme :
+
+\begin{itemize}
+  \item \lstinline|\title{Document avec page de présentation}|\\
+  Le titre du document.
+
+  \item \lstinline|\author{Abdelhakim Qbaich}|\\
+  L'auteur du document.
+  Il est possible d'inclure plusieurs auteurs, en les séparant avec \lstinline|\and|.
+
+  \item \lstinline|\date{Janvier 2017}|\\
+  La date du document.
+  Il est possible d'utiliser la commande \lstinline|\today| pour mettre à jour la date automatiquement, lors de la compilation du document.
+\end{itemize}
+
+Pour pouvoir afficher l'information ci-dessus, il faut utiliser :
+
+\begin{itemize}
+  \item \lstinline|\begin{titlepage}| et \lstinline|\end{titlepage}|\\
+  L'environnement \texttt{titlepage}.
+  Tout ce qui va à l'intérieur de cet environnement va apparaître dans la première page du document.
+
+  \item \lstinline|\maketitle|\\
+  Cette commande va afficher le titre, l'auteur et la date.
+  Elle peut aussi être utilisée à l'extérieur de l'environnement \texttt{titlepage}.
+\end{itemize}
+
+\subsection{Formatage}
+
+Tout ce qui est inclus dans l'environnement \texttt{document} est affiché dans le document final. Par exemple:
+
+\lstinputlisting[firstline=8, lastline=15]{create/formatting}
+
+Inclure un résumé d'un article est chose courante dans les publications scientifiques.
+\LaTeX{} permet cela grâce à l'environnement \texttt{abstract}.
+
+Lors de la rédaction de texte, un double saut de ligne signifie un nouveau paragraphe.
+Il est à noter que les paragraphes commencent avec un alinéa, par défaut.
+
+Pour sauter de ligne sans commencer un nouveau paragraphe, on utilise: \lstinline|\\| ou la commande \lstinline|\newline|.
+
+\subsection{Commentaires}
+
+Des fois, il est nécessaire d'inclure des commentaires dans son propre code.
+Cela se fait simplement avec un \texttt{\%} avant le commentaire. Par exemple:
+
+\lstinputlisting{create/comments}
+
+Il est possible d'utiliser l'environnement \texttt{comment} fourni par le <<package>> \texttt{comment} pour commenter plusieurs lignes.
+
+Pour pouvoir utiliser le symbole \texttt{\%}, sachant que c'est un \hyperref[symbols]{caractère réservé}, il vous faudra y ajouter un \texttt{\textbackslash} avant, comme ceci: \texttt{\textbackslash\%}.

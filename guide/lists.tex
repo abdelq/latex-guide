@@ -1,0 +1,52 @@
+\section{Listes}
+
+Les listes sont créées comme ceci :
+
+\lstinputlisting[firstline=6, lastline=9]{lists/intro}
+
+\subsection{Listes non-ordonnées}
+
+Une liste non-ordonnée est produite grâce à l'environnement \texttt{itemize}.
+Chaque entrée de la liste doit être précédée par \lstinline|\item|.
+
+\lstinputlisting[firstline=4, lastline=7]{lists/unordered}
+
+Par défaut, chaque élément est indiqué par un rond noir.
+
+\subsection{Listes ordonnées}
+
+Les listes ordonnées ont une syntaxe similaire aux listes non-ordonnées.
+Seul l'envrionnement change.
+
+Les listes sont générées avec l'environnement \texttt{enumerate}.
+
+\lstinputlisting[firstline=4, lastline=7]{lists/ordered}
+
+Chaque élément de la liste se voit attribué un nombre selon la position dans la liste, en commençant par \emph{1}.
+
+\subsection{Listes imbriquées}
+
+Dans \LaTeX, il est possible d'insérer des listes dans d'autres listes, et ce peut importe le type.
+
+\lstinputlisting[firstline=4, lastline=11]{lists/nested}
+
+\subsection{Style de listes}
+
+\subsubsection{Listes ordonnées}
+
+Le style de numérotation change dépendemment de la profondeur dans la liste :
+
+\lstinputlisting[firstline=8, lastline=23]{lists/style/ordered}
+
+Par défaut, la numérotation se fait comme suit :
+
+\begin{description}
+  \item[Niveau 1] Chiffres arabes : \emph{1, 2, 3\dots}
+  \item[Niveau 2] Lettres minuscules : \emph{a, b, c\dots}
+  \item[Niveau 3] Chiffres romains minuscules : \emph{i, ii, iii\dots}
+  \item[Niveau 4] Lettres majuscules : \emph{A, B, C\dots}
+\end{description}
+
+Cette façon de numéroter les listes peut être redéfinie comme ceci :
+
+% \lstinputlisting{lists/style/reordered}
